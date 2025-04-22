@@ -1,1 +1,60 @@
-<h1>Pagina de mis clientes</h1>
+<header>
+    <link rel="stylesheet" href="/styles.css">
+    <!-- Referencia a la libreria de iconos para el boton de editar y eliminar-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+</header>
+
+<div class="container">
+
+    <div class="head">
+        <span>Lista de Empleados</span>
+        <button id="new" onclick="openModal()">Registrar</button>
+        
+    </div>
+
+    <div class="divTable">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombres</th>
+                    <th>Primer Apellido</th>
+                    <th>Segundo Apellido</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
+                    <th class="edit">Editar</th>
+                    <th class="edit">Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+            
+        </table>
+
+        <!-- Formulario-->
+        <div class="modal-container">
+            <div class="modal">
+                <form>
+                    <label for="nombre"> Nombre</label>
+                    <input id="nombre" type="text" required />
+
+                    <label for="p_apellido">Primer Apellido</label>
+                    <input id="p_apellido" type="text" required />
+
+                    <label for="s_apellido">Segundo Apellido</label>
+                    <input id="s_apellido" type="text" required />
+
+                    <label for="direccion">Dirección</label>
+                    <input id="direccion" type="text" required />
+
+                    <label for="telefono">Teléfono</label>
+                    <input id="telefono" type="text" required />
+
+                    <button id="btnSave">Guardar</button>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
