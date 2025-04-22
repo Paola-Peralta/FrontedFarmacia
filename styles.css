@@ -49,7 +49,7 @@ header ul li a:hover {
 }
 
 .sidebar ul {
-    list-style: none;
+    list-style: none; /* Quita los puntitos */
     margin: 0;
     padding: 0;
 }
@@ -62,7 +62,14 @@ header ul li a:hover {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    display: block;
+    display: flex; /* Rama rios flex en vez block */
+    align-items: center; /* <- Esto centra los íconos verticalmente */
+    gap: 10px; /* <- Espacio entre ícono y texto */
+}
+
+/* Rama rios  */
+.sidebar ul li a i {
+    color: #00ABE4; /* Azul brillante para los íconos */
 }
 
 .sidebar ul li a:hover {
