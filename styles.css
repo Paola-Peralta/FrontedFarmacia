@@ -1,78 +1,103 @@
+
+/* VARIABLES DE COLOR    */
+:root {
+    --azul-claro: #E9F1FA;
+    --azul-brillante: #00ABE4;
+    --blanco: #FFFFFF;
+    --texto-oscuro: #333333;
+}
+
+
+/* RESET Y BASE          */
 * {
     padding: 0;
     margin: 0;
-    font-family: Arial, sans-serif
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-header {
-    background-color: #2f3e46;
-    color: white;
+body {
+    background-color: var(--azul-claro);
+    min-height: 100vh;
+}
+
+/* HEADER PRINCIPAL      */
+.main-header {
+    background-color: var(--blanco);
+    color: var(--texto-oscuro);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    height: 65px;   
+    padding: 0 30px;
+    height: 70px;
+    border-bottom: 2px solid var(--azul-brillante);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
 }
 
-h1{
+.main-header h1 {
     font-family: 'Times New Roman', Times, serif;
+    color: var(--azul-brillante);
 }
 
-header ul {
-    list-style: none; 
-    display: flex; 
-    flex-direction: row; 
-    gap: 20px; 
-    margin: 0;
-    padding: 0;
+/* NAVEGACIÓN SUPERIOR   */
+.top-nav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-header ul li a {
-    color: white;
+.top-nav a {
+    color: var(--texto-oscuro);
     text-decoration: none;
     font-weight: bold;
 }
 
-header ul li a:hover {
+.top-nav a:hover {
     text-decoration: underline;
 }
 
+
+/* BARRA LATERAL (SIDEBAR) */
 .sidebar {
     position: fixed;
-    top: 65px; 
+    top: 70px; /* Debajo del header */
     left: 0;
-    height: calc(100vh - 65px); 
-    width: 200px;
-    background-color: #2f3e46;
-    padding-top: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 70px);
+    width: 220px;
+    background-color: var(--blanco);
+    padding-top: 30px;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
 }
 
 .sidebar ul {
-    list-style: none; /* Quita los puntitos */
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
 .sidebar ul li {
-    padding: 20px 40px;
+    padding: 15px 25px;
 }
 
 .sidebar ul li a {
-    color: white;
+    color: var(--texto-oscuro);
     text-decoration: none;
     font-weight: bold;
-    display: flex; /* Rama rios flex en vez block */
-    align-items: center; /* <- Esto centra los íconos verticalmente */
-    gap: 10px; /* <- Espacio entre ícono y texto */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre ícono y texto */
 }
 
-/* Rama rios  */
 .sidebar ul li a i {
-    color: #00ABE4; /* Azul brillante para los íconos */
+    color: var(--azul-brillante); /* Color azul brillante para los íconos */
 }
 
-.sidebar ul li a:hover {
-    background-color: #3e4f58;
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: var(--azul-claro);
+    border-left: 4px solid var(--azul-brillante);
     border-radius: 4px;
 }
