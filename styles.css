@@ -44,9 +44,9 @@ body {
 
 /* NAVEGACIÓN SUPERIOR   */
 .top-nav {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+    list-style: none; /*Elimina los estilos predeterminados de lista, como los puntos en listas ul*/
+    display: flex; /* Organiza los elementos de manera horizontal */
+    gap: 20px; /* Es el espacio en pixeles que separa los elementos */
 }
 
 .top-nav a {
@@ -105,7 +105,9 @@ body {
 
 .container {
     width: 90%;
-    height: 80%;
+    max-width: 1200px;
+    margin: 100px auto 40px auto; /* margen superior para evitar el header fijo */
+    padding: 20px;
     border-radius: 10px;
     background: white;
 }
@@ -131,5 +133,4 @@ body {
     color: white;
     background-color: rgb(57, 57, 226);
 }
-  
-  
+

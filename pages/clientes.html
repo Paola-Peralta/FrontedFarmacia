@@ -1,60 +1,98 @@
-<header>
-    <link rel="stylesheet" href="/styles.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
     <!-- Referencia a la libreria de iconos para el boton de editar y eliminar-->
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
-</header>
-
-<div class="container">
-
-    <div class="head">
-        <span>Lista de Empleados</span>
-        <button id="new" onclick="openModal()">Registrar</button>
-        
-    </div>
-
-    <div class="divTable">
-        <table>
-            <thead>
-                <tr>
-                    <th>Nombres</th>
-                    <th>Primer Apellido</th>
-                    <th>Segundo Apellido</th>
-                    <th>Dirección</th>
-                    <th>Teléfono</th>
-                    <th class="edit">Editar</th>
-                    <th class="edit">Eliminar</th>
-                </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
+    
+    <link rel="stylesheet" href="cssPages/sytlesClientes.css">
+</head>
+<body>
+    <header>
+    </header>
+    
+    <div class="container">
+    
+        <div class="head">
+            <span>Lista de Clientes</span>
+            <button id="new" onclick="openModal()">Registrar</button>
             
-        </table>
-
-        <!-- Formulario-->
-        <div class="modal-container">
-            <div class="modal">
-                <form>
-                    <label for="nombre"> Nombre</label>
-                    <input id="nombre" type="text" required />
-
-                    <label for="p_apellido">Primer Apellido</label>
-                    <input id="p_apellido" type="text" required />
-
-                    <label for="s_apellido">Segundo Apellido</label>
-                    <input id="s_apellido" type="text" required />
-
-                    <label for="direccion">Dirección</label>
-                    <input id="direccion" type="text" required />
-
-                    <label for="telefono">Teléfono</label>
-                    <input id="telefono" type="text" required />
-
-                    <button id="btnSave">Guardar</button>
-
-                </form>
-            </div>
         </div>
+    
+        <div class="table-wrapper">
+            <table class="clientes-table">
+                <thead>
+                    <tr>
+                        <th>Nombres</th>
+                        <th>Primer Apellido</th>
+                        <th>Segundo Apellido</th>
+                        <th>Numero Cédula</th>
+                        <th>Dirección</th>
+                        <th>Teléfono</th>
+                    </tr>
+                </thead>
+                <tbody>
+    
+                </tbody>
+                
+            </table>
+            
+            <!-- Formulario-->
+            <div class="modal-container">
+                <div class="modal">
+                    <form>
+                        <i class='bx bx-x close-modal' onclick="closeModal()"></i>
 
-    </div>
-</div>
+                        <label for="nombre"> Nombres</label>
+                        <input id="nombre" type="text" required />
+    
+                        <label for="p_apellido">Primer Apellido</label>
+                        <input id="p_apellido" type="text" required />
+    
+                        <label for="s_apellido">Segundo Apellido</label>
+                        <input id="s_apellido" type="text" required />
+
+                        
+                        <label for="cedula">Cedula</label>
+                        <input id="cedula" type="text" required />
+    
+                        <label for="direccion">Dirección</label>
+                        <input id="direccion" type="text" required />
+    
+                        <label for="telefono">Teléfono</label>
+                        <input id="telefono" type="text" required />
+    
+                        <button id="btnSave">Guardar</button>
+    
+                    </form>
+                </div> <!--Div cierre de modal-->
+
+            </div> <!--Div cierre de modal container-->
+    
+        </div> <!--Div cierre de divtable-->
+
+    </div> <!--Div cierre de container-->
+
+
+    <!--Script del modal-->
+      <script>
+       
+      
+        window.addEventListener('click', function(e) {
+          const modalContainer = document.querySelector('.modal-container');
+          if (e.target === modalContainer) {
+            modalContainer.classList.remove('active');
+            setTimeout(() => {
+              modalContainer.style.display = 'none'; // Ocultar completamente después de la animación
+            }, 300); // el mismo tiempo que el transition en CSS
+          }
+        });
+      </script>
+
+      <script src="scriptPages/scriptsClientes.js"></script>
+      
+      
+</body>
+</html>

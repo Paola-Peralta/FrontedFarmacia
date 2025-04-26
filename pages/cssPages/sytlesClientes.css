@@ -1,0 +1,129 @@
+/* Css dedicado a page clientes */
+/* Clase */
+.table-wrapper {
+    overflow-x: auto; /*aparece una barra de desplazamiento horizontal 
+    si el contenido dentro del div es más ancho de lo que cabe*/ 
+    margin-top: 20px; /*Agrega un espacio de 20 píxeles por arriba del contenedor*/
+    border-radius: 10px; /* esquinas del contenedor estén redondeadas con un radio de 10 píxeles.*/
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+.clientes-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px; /*bordes redondeados de 10 píxeles en las esquinas */
+    overflow: hidden; /*Oculta cualquier contenido que se salga del área de la tabla*/
+    background-color: #fff;
+  }
+
+  .clientes-table thead {
+    background-color: var(--azul-brillante, #3498db);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .clientes-table th,
+  .clientes-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .clientes-table tbody tr:hover {
+    background-color: var(--azul-claro, #ecf6ff);
+    cursor: pointer;
+  }
+  
+  .clientes-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  @media (max-width: 768px) {
+    .clientes-table th, .clientes-table td {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; /* Oculto por defecto */
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.modal-container.active {
+  display: flex;
+  opacity: 1;
+}
+
+
+.modal {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+  max-width: 600px; /* <-- ancho máximo del modal */
+  width: 90%; /* para que sea responsive */
+  position: relative; /* necesario para ubicar el botón cerrar */
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  color: #888;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close-modal:hover {
+  color: #333;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.modal button {
+    background-color: var(--azul-brillante);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background-color: #007bbd;
+}
+
+.modal-container.active .modal {
+  transform: translateY(0);
+}
+
+
