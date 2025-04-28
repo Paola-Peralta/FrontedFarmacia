@@ -13,26 +13,29 @@
     <header class="main-header">
       <h1>💊 Farmacias Angeluz</h1>
       <ul class="top-nav">
-          <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
-          <li><a href="#">Notificaciones</a></li>
-          <li><a href="#">Configuraciones</a></li>
-      </ul>
-  </header>
+        <li><a href="#" onclick="loadContent('index.html')"><i class="fas fa-home"></i> Inicio</a></li>
+        <li><a href="#">Notificaciones</a></li>
+        <li><a href="#">Configuraciones</a></li>
+    </ul>
+</header>
 
-        <nav class="sidebar">
-          <ul>
-            <!--Rama rios-->
-            <li><a href="pages/clientes.html"><i class="fas fa-user"></i> Clientes</a></li>
-            <li><a href="#"><i class="fas fa-box"></i> Productos</a></li>
-            <li><a href="#"><i class="fas fa-cash-register"></i> Ventas</a></li>
-            <li><a href="#"><i class="fas fa-shopping-cart"></i> Compras</a></li>
-            <li><a href="#"><i class="fas fa-truck"></i> Proveedores</a></li>
-            <li><a href="#"><i class="fas fa-vial"></i> Exámenes</a></li>
-            <li><a href="#"><i class="fas fa-chart-line"></i> Reportes</a></li>
-          </ul>
-        </nav>
+<nav class="sidebar">
+    <ul>
+        <li><a href="#" onclick="loadContent('pages/clientes.html')"><i class="fas fa-user"></i> Clientes</a></li>
+        <li><a href="#" onclick="loadContent('productos')"><i class="fas fa-box"></i> Productos</a></li>
+        <li><a href="#" onclick="loadContent('ventas')"><i class="fas fa-cash-register"></i> Ventas</a></li>
+        <li><a href="#" onclick="loadContent('compras')"><i class="fas fa-shopping-cart"></i> Compras</a></li>
+        <li><a href="#" onclick="loadContent('proveedores')"><i class="fas fa-truck"></i> Proveedores</a></li>
+        <li><a href="#" onclick="loadContent('examenes')"><i class="fas fa-vial"></i> Exámenes</a></li>
+        <li><a href="#" onclick="loadContent('reportes')"><i class="fas fa-chart-line"></i> Reportes</a></li>
+    </ul>
+</nav>
 
-       
+<div class="content" id="content-area">
+    <!-- Aquí se cargará el contenido dinámicamente -->
+</div>
 
+<script src="script.js"></script>
 </body>
 </html>
+   

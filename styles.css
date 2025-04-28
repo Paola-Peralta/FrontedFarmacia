@@ -21,6 +21,7 @@ body {
     min-height: 100vh;
 }
 
+
 /* HEADER PRINCIPAL      */
 .main-header {
     background-color: var(--blanco);
@@ -62,6 +63,7 @@ body {
 
 /* BARRA LATERAL (SIDEBAR) */
 .sidebar {
+    flex-shrink: 0; /* Evita que el sidebar se encoja */
     position: fixed;
     top: 70px; /* Debajo del header */
     left: 0;
@@ -104,9 +106,9 @@ body {
 
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 100px auto 40px auto; /* margen superior para evitar el header fijo */
+    width: calc(100% - 250px); /* ocupar todo el ancho disponible quitando el sidebar */
+    margin-left: 250px;
+    margin-top: 100px;
     padding: 20px;
     border-radius: 10px;
     background: white;
