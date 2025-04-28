@@ -1,3 +1,5 @@
+
+
 function openModal() {
     const modalContainer = document.querySelector('.modal-container');
     modalContainer.style.display = 'flex'; // Mostrar el modal
