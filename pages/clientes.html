@@ -25,10 +25,10 @@
             <table class="clientes-table">
                 <thead>
                     <tr>
+                        <th>Código</th>
                         <th>Nombres</th>
                         <th>Primer Apellido</th>
                         <th>Segundo Apellido</th>
-                        <th>Numero Cédula</th>
                         <th>Dirección</th>
                         <th>Teléfono</th>
                     </tr>
@@ -45,6 +45,9 @@
                     <form>
                         <i class='bx bx-x close-modal' onclick="closeModal()"></i>
 
+                        <label for="cedula">Cedula</label>
+                        <input id="cedula" type="text" required />
+
                         <label for="nombre"> Nombres</label>
                         <input id="nombre" type="text" required />
     
@@ -54,9 +57,7 @@
                         <label for="s_apellido">Segundo Apellido</label>
                         <input id="s_apellido" type="text" required />
 
-                        
-                        <label for="cedula">Cedula</label>
-                        <input id="cedula" type="text" required />
+                    
     
                         <label for="direccion">Dirección</label>
                         <input id="direccion" type="text" required />

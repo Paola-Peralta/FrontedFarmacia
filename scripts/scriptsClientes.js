@@ -30,3 +30,27 @@ window.addEventListener('click', function(e) {
           closeModal();
         }
       });
+
+// Cuando el formulario se envía
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('.modal-container form');
+  form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevenimos el comportamiento por defecto del formulario
+
+      // Obtenemos los datos del formulario
+      const nuevoCliente = {
+          codigo: document.getElementById('cedula').value.trim(),
+          nombres: document.getElementById('nombre').value.trim(),
+          primerApellido: document.getElementById('p_apellido').value.trim(),
+          segundoApellido: document.getElementById('s_apellido').value.trim(),
+          direccion: document.getElementById('direccion').value.trim(),
+          telefono: document.getElementById('telefono').value.trim(),
+      };
+
+      // Llamamos a la función para enviar los datos al backend (API)
+      crearCliente(nuevoCliente);
+  });
+
+  // Llamar a la función para cargar los clientes al inicio
+  fetchClientes();
+});
