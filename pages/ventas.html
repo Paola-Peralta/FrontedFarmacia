@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Ventas (Facturas)</title>
+    <link rel="stylesheet" href="cssPages/stylesVentas.css">
+</head>
+<body>
+
+    <h1>Gestión de Ventas y Facturas</h1>
+
+    <button id="btnNuevaVenta" class="btn">Nueva Venta</button>
+
+    <table id="tablaVentas">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Fecha</th>
+                <th>IVA</th>
+                <th>Descuento</th>
+                <th>Cliente</th>
+                <th>Tipo Factura</th>
+                <th>Sucursal</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Ventas se cargan dinámicamente -->
+        </tbody>
+    </table>
+
+    <!-- MODAL NUEVA VENTA -->
+    <div id="modalVenta" class="modal">
+        <div class="modal-contenido">
+            <span id="cerrarModal" class="cerrar">&times;</span>
+            <h2>Nueva Venta</h2>
+            <form id="formNuevaVenta">
+                <div class="form-group">
+                    <input type="text" id="codigo" placeholder="Código" required>
+                </div>
+                <div class="form-group">
+                    <input type="date" id="fecha" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="iva" placeholder="IVA (%)" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="descuento" placeholder="Descuento (%)" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="cliente" placeholder="Cliente" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="tipoFactura" placeholder="Tipo Factura" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="sucursal" placeholder="Sucursal" required>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="btn">Guardar</button>
+                    <button type="button" onclick="cerrarModal()" class="btn btn-cancelar">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="scriptPages/scriptsVentas.js"></script>
+</body>
+</html>
